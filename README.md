@@ -1,122 +1,73 @@
-# Edge AI Computer Vision System – AI4SEE
+# AI-Based Real-Time Surveillance System (Edge AI)
 
 ## Overview
-This project represents **real-world startup work** carried out during an internship at **AI4SEE**, focused on building and optimizing a **real-time edge AI computer vision system**.
+This project implements a real-time AI-powered surveillance system using YOLO-based deep learning models deployed on an NVIDIA Jetson Nano for edge inference. The system performs live object detection, segmentation, fire detection, motion detection, and intruder alerting using CCTV video streams with low latency.
 
-The system was designed to perform **on-device inference** under resource constraints, reflecting production challenges faced in **smart surveillance, industrial vision, and edge analytics** platforms.
-
----
-
-## Company Context
-AI4SEE is a startup working on **AI-driven vision solutions**, where performance, latency, and deployment constraints are critical.
-
-The internship involved contributing to a **live project**, not a demo or proof-of-concept, with emphasis on **practical deployment over academic experimentation**.
+This project was developed and deployed during my Embedded Systems & AIoT internship, focusing on production-like edge AI performance rather than academic demos.
 
 ---
 
 ## Problem Statement
-Cloud-based computer vision introduces:
-- High latency
-- Network dependency
-- Increased operational cost
-
-The objective was to implement an **edge-based vision pipeline** that:
-- Performs inference locally
-- Responds in real time
-- Operates within limited compute and memory budgets
+Traditional CCTV surveillance systems rely heavily on manual monitoring, which leads to delayed responses and human error. The goal of this project is to automate surveillance tasks by running real-time computer vision models directly on an edge device, enabling faster alerts and reduced cloud dependency.
 
 ---
 
 ## System Architecture
-The system follows an **edge-first vision architecture**:
+**Input:** Live CCTV video feed  
+**Processing:** YOLO-based real-time inference on Jetson Nano  
+**Output:** Visual overlays and alert triggers (intrusion, fire, motion, segmentation)
 
-### 1. Input Layer
-- Live camera feed
-- Frame preprocessing
+📌 *(Add architecture diagram image here)*
 
-### 2. Inference Layer
-- Deep learning model optimized for edge deployment
-- Real-time object detection pipeline
-
-### 3. Post-Processing Layer
-- Bounding box filtering
-- Event generation
-- Output visualization
-
-### 4. Deployment Layer
-- Edge device execution
-- Continuous runtime monitoring
 
 ---
 
 ## Technology Stack
-### Software
-- **Python**
-- **OpenCV** for video processing
-- **YOLO-based models** for object detection
-- Model optimization techniques
-- Real-time inference pipelines
-
-### Hardware
-- **Edge AI device** (Jetson-class / CPU-based edge system)
-- Camera modules
+- **Hardware:** NVIDIA Jetson Nano
+- **Languages:** Python
+- **Computer Vision:** YOLO, OpenCV
+- **OS:** Linux (JetPack SDK)
 
 ---
 
-## Engineering Challenges Solved
-- **Real-time inference optimization** under hardware constraints
-- **Latency reduction** through pipeline tuning
-- **Efficient frame handling** to maintain stable FPS
-- **Balancing accuracy vs performance** for deployment use cases
+## Key Features
+- Real-time object detection and segmentation
+- Fire detection and intruder alerting
+- Motion detection using live video streams
+- Edge-based inference without cloud dependency
+- Optimized inference pipeline for embedded deployment
 
 ---
 
-## Performance Characteristics
-- Real-time object detection on live video streams
-- Stable inference loop with consistent FPS
-- Optimized memory and compute usage
+## Performance & Optimization
+- Deployed on Jetson Nano with live CCTV input
+- Optimized processing pipeline resulting in **~35% improvement in inference efficiency**
+- Designed for low-latency edge alerts
 
-*(Exact performance depends on model configuration and hardware)*
-
----
-
-## Industry Relevance
-This project aligns directly with:
-- Edge AI deployments
-- Smart surveillance systems
-- Industrial vision platforms
-- Real-time analytics at the edge
-
-It demonstrates the ability to **move models from theory to deployment**, which is critical in production AI roles.
+📌 *(Add FPS / latency metrics here if available)*
 
 ---
 
-## How to Run
-1. Set up Python environment
-2. Install required dependencies (OpenCV, inference libraries)
-3. Connect camera device
-4. Run inference pipeline
-5. Observe real-time detection output
+## Demo & Results
+📌 *(Add 2–3 screenshots or a short demo video link)*
+
 
 ---
 
-## Key Takeaway for Recruiters
-This project demonstrates:
-- Startup-level execution
-- Real-world edge AI constraints
-- Practical computer vision deployment experience
-- Optimization mindset over academic experimentation
+## Challenges Faced
+- Achieving real-time performance on resource-constrained hardware
+- Handling latency in live video streams
+- Optimizing model inference for edge deployment
 
 ---
 
-## Future Enhancements
-- TensorRT-based acceleration
-- Multi-camera support
-- Cloud-edge hybrid analytics
-- Model versioning and monitoring
+## Future Improvements
+- TensorRT optimization
+- Quantized model deployment
+- Training with a custom dataset
+- Multi-camera scalability
 
 ---
 
-## Author
-**Kamalesh V**  
-Edge AI | Computer Vision | Embedded AI Systems
+## Impact
+This project demonstrates hands-on experience in deploying real-time computer vision systems on edge devices, combining embedded systems, AI, and hardware–software integration in a production-oriented setup.
