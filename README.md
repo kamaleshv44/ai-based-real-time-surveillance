@@ -41,7 +41,7 @@ Traditional CCTV surveillance systems rely heavily on manual monitoring, which l
 - Deployed on Jetson Nano with live CCTV input
 - Optimized processing pipeline resulting in **~35% improvement in inference efficiency**
 - Designed for low-latency edge alerts
-
+- Achieved real-time inference on Jetson Nano with live CCTV input (~12–18 FPS at 720p resolution).
 
 ---
 
